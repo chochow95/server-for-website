@@ -35,6 +35,7 @@ router.post('/send', (req, res, next) => {
     subject: 'New Message from Contact Form',
     text: content
   }
+  res.send('<html><body><h1>Hello World</h1></body></html>');
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
@@ -53,4 +54,4 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
-app.listen(3005)
+app.listen()
