@@ -6,7 +6,7 @@ const creds = require('./config');
 
 var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
-    port: 465,
+    port: 587,
     auth: {
     user: creds.USER,
     pass: creds.PASS
@@ -31,7 +31,7 @@ router.post('/send', (req, res, next) => {
 
   var mail = {
     from: name,
-    to: 'RECEIVING_EMAIL_ADDRESS_GOES_HERE',  // Change to email address that you want to receive messages on
+    to: 'zhan5559@umn.edu',  // Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
     text: content
   }
@@ -54,4 +54,4 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
-app.listen(process.env.PORT)
+app.listen(process.env.PORT||3003)

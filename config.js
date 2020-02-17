@@ -1,4 +1,4 @@
 module.exports = {
     USER: 'spotifymatchtest@gmail.com', 
-    PASS: 'Zzq123123'
+    PASS: 'Zzq123123..'
 }
